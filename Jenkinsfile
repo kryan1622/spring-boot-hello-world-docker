@@ -4,17 +4,17 @@ agent any
 
                 stage('---clean---'){
                         steps{
-                                sh "mvn clean"
+                                sh "mvn clean" -f /var/lib/jenkins/jobs 
                         }
                 }
                 stage('--test--'){
                         steps{
-                                sh "mvn test"
+                                sh "mvn test" -f /var/lib/jenkins/jobs
                         }
                 }
                 stage('--package--'){
                         steps{
-                                sh "mvn package"
+                                sh "mvn package" -f /var/lib/jenkins/jobs
                         }
                 }
 }
