@@ -4,17 +4,17 @@ pipeline{
 
                 stage('---clean---'){
                         steps{
-                                sh "mvn clean" -f /var/lib/jenkins/workspace/azurejenkins 
+                                sh "mvn clean -f /var/lib/jenkins/workspace/azurejenkins" 
                         }
                 }
                 stage('--test--'){
                         steps{
-                                sh "mvn test" -f /var/lib/jenkins/workspace/azurejenkins
+                                sh "mvn test -f /var/lib/jenkins/workspace/azurejenkins"
                         }
                 }
                 stage('--package--'){
                         steps{
-                                sh "mvn package" -f /var/lib/jenkins/workspace/azurejenkins
+                                sh "mvn package -f /var/lib/jenkins/workspace/azurejenkins"
                         }
                 }
 	}
